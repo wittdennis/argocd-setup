@@ -1,0 +1,16 @@
+---
+ssh_user: dwitt
+
+argocd_chart_version: 6.6.0
+argocd_helm_values:
+  global:
+    domain: deployments.derwitt.me
+  securityContext:
+    fsGroup: 1000
+    runAsUser: 1000
+    runAsGroup: 1000
+    runAsNonRoot: true
+    seccompProfile:
+      type: RuntimeDefault
+  networkPolicy:
+    create: true

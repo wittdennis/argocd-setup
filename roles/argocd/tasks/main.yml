@@ -1,0 +1,19 @@
+---
+- name: ARGOCD | Install argo-cd cli
+  ansible.builtin.include_tasks:
+    file: install-cli.yml
+  when: argocd__install_cli
+
+- name: ARGOCD | Add argocd helm repo
+  kubernetes.core.helm_repository:
+    name: argo
+    repo_url: https://argoproj.github.io/argo-helm
+
+- name: ARGOCD | Deploy argocd
+  kubernetes.core.helm:
+    name: argocd
+    chart_ref: argo/argo-cd
+    release_namespace: argocd
+    create_namespace: true
+    chart_version: "{{ argocd__chart_version }}"
+    values: "{{ argocd__helm_values }}"
