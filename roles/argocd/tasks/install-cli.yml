@@ -1,0 +1,24 @@
+---
+- name: ARGOCD | Gather current cli version
+  ansible.builtin.shell:
+    cmd: |
+      set -o pipefail
+      /usr/local/bin/argocd version --client --short | cut -d " " -f 2 | cut -d "+" -f 1
+  register: argocd_cli_version
+  changed_when: false
+  failed_when: false
+
+- name: ARGOCD | Download argocd cli
+  when: argocd_cli_version.stdout != argocd__version
+  ansible.builtin.get_url:
+    url: "https://github.com/argoproj/argo-cd/releases/download/{{ argocd__version }}/argocd-linux-{{ argocd__cli_arch }}"
+    dest: "/usr/local/bin/argocd"
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: ARGOCD | Create sbin link
+  ansible.builtin.file:
+    state: link
+    src: /usr/local/bin/argocd
+    dest: /usr/local/sbin/argocd
