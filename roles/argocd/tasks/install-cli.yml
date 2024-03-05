@@ -16,9 +16,3 @@
     owner: root
     group: root
     mode: "0755"
-
-- name: ARGOCD | Create sbin link
-  ansible.builtin.file:
-    state: link
-    src: /usr/local/bin/argocd
-    dest: /usr/local/sbin/argocd
