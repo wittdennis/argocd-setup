@@ -1,0 +1,24 @@
+---
+- name: ARGOCD | Remove argocd
+  kubernetes.core.helm:
+    name: argocd
+    state: absent
+    release_namespace: argocd
+    wait: true
+
+- name: ARGOCD | Remove argocd helm repo
+  kubernetes.core.helm_repository:
+    name: argo
+    state: absent
+
+- name: ARGOCD | Remove argocd namespace
+  kubernetes.core.k8s:
+    name: argocd
+    api_version: v1
+    kind: Namespace
+    state: absent
+
+- name: ARGOCD | Remove cli
+  ansible.builtin.file:
+    path: /usr/local/bin/argocd
+    state: absent

@@ -1,6 +1,6 @@
 ---
-# defaults file for roles/argocd
 argocd__version: v2.10.2
 argocd__chart_version: 6.6.0
 argocd__helm_values: {}
 argocd__install_cli: false
+argocd__action: deploy

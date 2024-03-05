@@ -12,3 +12,4 @@
         argocd__chart_version: "{{ argocd_chart_version }}"
         argocd__install_cli: true
         argocd__helm_values: "{{ argocd_helm_values | from_yaml }}"
+        argocd__action: "deploy"
