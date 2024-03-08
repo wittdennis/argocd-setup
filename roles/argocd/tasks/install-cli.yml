@@ -10,6 +10,7 @@
 
 - name: ARGOCD | Download argocd cli
   when: argocd_cli_version.stdout != argocd__version
+  become: true
   ansible.builtin.get_url:
     url: "https://github.com/argoproj/argo-cd/releases/download/{{ argocd__version }}/argocd-linux-{{ argocd__cli_arch }}"
     dest: "/usr/local/bin/argocd"

@@ -1,10 +1,9 @@
 ---
 - name: Install ArgoCD
-  hosts: label_kubernetes_role_control_plane
+  hosts: k8s.home
   vars_files:
     - ./vars.yml
   remote_user: "{{ ssh_user }}"
-  become: true
   run_once: true
   roles:
     - role: argocd
