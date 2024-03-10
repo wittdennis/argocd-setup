@@ -4,7 +4,7 @@ ssh_user: dwitt
 argocd_chart_version: 6.6.0
 argocd_helm_values:
   global:
-    domain: deployments.derwitt.me
+    domain: deployments.k8s.home
   securityContext:
     fsGroup: 1000
     runAsUser: 1000
