@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: backbone-services
+  namespace: argocd
+spec:
+  sourceRepos:
+    - "https://github.com/wittdennis/k8s-backbone-services"
+    - "https://github.com/wittdennis/argocd-setup"
+  destinations:
+    - namespace: "*"
+      server: "*"
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
