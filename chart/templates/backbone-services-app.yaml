@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backbone-services
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: backbone-services
+  destination: 
+    namespace: argocd
+    server: {{ .Values.destination.server }}
+  source:
+    path: appsets
+    repoURL: https://github.com/wittdennis/k8s-backbone-services    
+    targetRevision: HEAD
