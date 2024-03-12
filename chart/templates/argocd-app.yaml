@@ -11,7 +11,7 @@ spec:
     automated: {}
   destination:
     namespace: argocd
-    server: { { .Values.destination.server } }
+    server: {{ .Values.destination.server }}
   source:
     repoURL: https://argoproj.github.io/argo-helm
     targetRevision: 6.6.0
