@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: backbone-services
+  name: k8s-platform
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: backbone-services
+  project: k8s-platform
   syncPolicy:
     automated: {}
   destination: 
@@ -14,5 +14,5 @@ spec:
     server: {{ .Values.destination.server }}
   source:
     path: appsets
-    repoURL: https://github.com/wittdennis/k8s-backbone-services    
+    repoURL: https://github.com/wittdennis/k8s-platform    
     targetRevision: HEAD
