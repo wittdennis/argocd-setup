@@ -13,6 +13,6 @@ spec:
     namespace: argocd
     server: {{ .Values.destination.server }}
   source:
-    path: argo-apps
+    path: packages/argo-apps
     repoURL: https://github.com/wittdennis/k8s-platform    
     targetRevision: HEAD
