@@ -4,7 +4,7 @@ ssh_user: dwitt
 argocd_chart_version: 6.6.0
 argocd_helm_values:
   global:
-    domain: deployments.k8s.home
+    domain: deployments.home.derwitt.net
   securityContext:
     fsGroup: 1000
     runAsUser: 1000
@@ -14,3 +14,9 @@ argocd_helm_values:
       type: RuntimeDefault
   networkPolicy:
     create: true
+  server:
+    ingress:
+      enabled: false
+  configs:
+    params:
+      server.insecure: true

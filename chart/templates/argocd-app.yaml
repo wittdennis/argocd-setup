@@ -21,7 +21,7 @@ spec:
       values: |
 
         global:
-          domain: k8s.home
+          domain: deployments.home.derwitt.net
         securityContext:
           fsGroup: 1000
           runAsUser: 1000
@@ -37,5 +37,3 @@ spec:
         configs:
           params:
             server.insecure: true
-            server.rootpath: /argocd
-            server.basehref: /argocd

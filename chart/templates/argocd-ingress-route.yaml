@@ -8,13 +8,13 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`k8s.home`) && PathPrefix(`/argocd`)
+      match: Host(`deployments.home.derwitt.net`)
       priority: 10
       services:
         - name: argocd-server
           port: 80
     - kind: Rule
-      match: Host(`k8s.home`) && PathPrefix(`/argocd`) && Headers(`Content-Type`, `application/grpc`)
+      match: Host(`deployments.home.derwitt.net`) && Headers(`Content-Type`, `application/grpc`)
       priority: 11
       services:
         - name: argocd-server
