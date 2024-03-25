@@ -12,6 +12,6 @@ spec:
       server: {{ .Values.destination.server }}
   namespaceResourceWhitelist:
     - group: ""
-      kind: "Application"
+      kind: "argoproj.io:Application"
     - group: ""
-      kind: "ApplicationSet"
+      kind: "argoproj.io:ApplicationSet"
