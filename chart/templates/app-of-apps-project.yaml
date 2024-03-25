@@ -11,12 +11,12 @@ spec:
     - namespace: "argocd"
       server: {{ .Values.destination.server }}
   clusterResourceWhitelist:
-    - group: ""
-      kind: "argoproj.io:Application"
-    - group: ""
-      kind: "argoproj.io:ApplicationSet"
+    - group: "argoproj.io"
+      kind: "Application"
+    - group: "argoproj.io"
+      kind: "ApplicationSet"
   namespaceResourceWhitelist:
-    - group: ""
-      kind: "argoproj.io:Application"
-    - group: ""
-      kind: "argoproj.io:ApplicationSet"
+    - group: "argoproj.io"
+      kind: "Application"
+    - group: "argoproj.io"
+      kind: "ApplicationSet"
