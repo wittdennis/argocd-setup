@@ -12,3 +12,5 @@ spec:
   namespaceResourceWhitelist:
     - group: ""
       kind: "Application"
+    - group: ""
+      kind: "ApplicationSet"
