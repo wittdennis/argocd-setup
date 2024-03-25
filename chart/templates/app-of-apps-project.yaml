@@ -6,6 +6,7 @@ metadata:
 spec:
   sourceRepos:
     - https://github.com/wittdennis/argocd-setup
+    - https://github.com/wittdennis/k8s-platform
   destinations:
     - namespace: "argocd"
       server: {{ .Values.destination.server }}
