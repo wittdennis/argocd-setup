@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: app-of-apps
+  namespace: argocd
+spec:
+  sourceRepos:
+    - https://github.com/wittdennis/argocd-setup
+  destinations:
+    - namespace: "argocd"
+      server: {{ .Values.destination.server }}
+  namespaceResourceWhitelist:
+    - group: ""
+      kind: "Application"

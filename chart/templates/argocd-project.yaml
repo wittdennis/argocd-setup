@@ -8,7 +8,6 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   sourceRepos:
-    - "https://github.com/wittdennis/argocd-setup"
     - "https://argoproj.github.io/argo-helm"
   destinations:
     - namespace: "argocd"
