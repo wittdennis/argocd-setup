@@ -35,5 +35,14 @@ spec:
           ingress:
             enabled: false
         configs:
+          cm:
+            # ignore auto converted resources from victoria metrics operator
+            resource.exclusions: |
+              - apiGroups:
+                  - "operator.victoriametrics.com"
+                kinds:
+                  - "VMServiceScrape"
+                clusters:
+                  - {{ .Values.destination }}
           params:
             server.insecure: true
