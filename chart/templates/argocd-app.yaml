@@ -21,7 +21,7 @@ spec:
       values: |
 
         global:
-          domain: deployments.home.derwitt.net
+          domain: {{ .Values.global.domain }}
         securityContext:
           fsGroup: 1000
           runAsUser: 1000
@@ -44,5 +44,29 @@ spec:
                   - "VMServiceScrape"
                 clusters:
                   - {{ .Values.destination.server }}
+            resource.customizations: |
+              cert-manager.io/Certificate:
+              health.lua: |
+                hs = {}
+                if obj.status ~= nil then
+                  if obj.status.conditions ~= nil then
+                    for i, condition in ipairs(obj.status.conditions) do
+                      if condition.type == "Ready" and condition.status == "False" then
+                        hs.status = "Degraded"
+                        hs.message = condition.message
+                        return hs
+                      end
+                      if condition.type == "Ready" and condition.status == "True" then
+                        hs.status = "Healthy"
+                        hs.message = condition.message
+                        return hs
+                      end
+                    end
+                  end
+                end
+
+                hs.status = "Progressing"
+                hs.message = "Waiting for certificate"
+                return hs
           params:
             server.insecure: true
