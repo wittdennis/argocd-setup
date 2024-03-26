@@ -43,6 +43,6 @@ spec:
                 kinds:
                   - "VMServiceScrape"
                 clusters:
-                  - {{ .Values.destination }}
+                  - {{ .Values.destination.server }}
           params:
             server.insecure: true
