@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: home-assistant
+  namespace: argocd
+spec:
+  sourceRepos:
+    - https://github.com/wittdennis/home-assistant.git
+    - http://pajikos.github.io/home-assistant-helm-chart
+  destinations:
+    - namespace: home-assistant
+      server: {{ .Values.destination.server }}
+  clusterResourceBlacklist:
+    - group: "*"
+      kind: "*"
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"
