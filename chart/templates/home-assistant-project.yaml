@@ -10,6 +10,8 @@ spec:
   destinations:
     - namespace: home-assistant
       server: {{ .Values.destination.server }}
+    - namespace: argocd
+      server: {{ .Values.destination.server }}
   clusterResourceBlacklist:
     - group: "*"
       kind: "*"
