@@ -36,6 +36,11 @@ spec:
             enabled: false
         configs:
           cm:
+            resource.customizations.ignoreDifferences.all: |
+              group: "operator.victoriametrics.com"
+              kind: "VMServiceScrape"
+              managedFieldsManagers:
+                - manager
             resource.customizations: |
               cert-manager.io/Certificate:
                 health.lua: |
