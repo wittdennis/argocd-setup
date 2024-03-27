@@ -37,8 +37,6 @@ spec:
         configs:
           cm:
             resource.customizations.ignoreDifferences.all: |
-              group: "operator.victoriametrics.com"
-              kind: "VMServiceScrape"
               managedFieldsManagers:
                 - manager
             resource.customizations: |
