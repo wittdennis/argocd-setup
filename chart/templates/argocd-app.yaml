@@ -36,9 +36,6 @@ spec:
             enabled: false
         configs:
           cm:
-            resource.customizations.ignoreDifferences.all: |
-              managedFieldsManagers:
-                - manager
             resource.customizations: |
               cert-manager.io/Certificate:
                 health.lua: |
