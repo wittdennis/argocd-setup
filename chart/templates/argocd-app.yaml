@@ -14,7 +14,7 @@ spec:
     server: {{ .Values.destination.server }}
   source:
     repoURL: https://argoproj.github.io/argo-helm
-    targetRevision: 6.7.3
+    targetRevision: 6.7.16
     chart: argo-cd
     helm:
       releaseName: argocd
@@ -31,9 +31,38 @@ spec:
             type: RuntimeDefault
         networkPolicy:
           create: true
+        controller:
+          metrics:
+            enabled: true
+            serviceMonitor:
+              enabled: true
+        redis:
+          metrics:
+            enabled: true
+            serviceMonitor:
+              enabled: true
         server:
+          metrics:
+            enabled: true
+            serviceMonitor:
+              enabled: true
           ingress:
             enabled: false
+        repoServer:
+          metrics:
+            enabled: true
+            serviceMonitor:
+              enabled: true
+        applicationSet:
+          metrics:
+            enabled: true
+            serviceMonitor:
+              enabled: true
+        notifications:
+          metrics:
+            enabled: true
+            serviceMonitor:
+              enabled: true
         dex:
           env: 
             - name: MICROSOFT_APPLICATION_ID
