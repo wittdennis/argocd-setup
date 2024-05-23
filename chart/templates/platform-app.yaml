@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: platform
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: app-of-apps
+  syncPolicy:
+    automated:
+      prune: true
+  destination:
+    namespace: argocd
+    server: {{ .Values.destination.server }}
+  source:
+    path: "."
+    repoURL: https://github.com/wittdennis/k8s-platform
+    targetRevision: feat/OPS-30-cloud-cluster
+    directory:
+      exclude: "*.json"
