@@ -91,7 +91,7 @@ spec:
             serviceMonitor:
               enabled: true
         dex:
-          env: 
+          env:
             - name: MICROSOFT_APPLICATION_ID
               valueFrom:
                 secretKeyRef:
@@ -125,6 +125,13 @@ spec:
                     onlySecurityGroups: true
                     groups:
                       - k8s-admins
+            resource.exclusions: |
+              - apiGroups:
+                  - cilium.io
+                kinds:
+                  - CiliumIdentity
+                clusters:
+                  - "*"
             resource.customizations: |
               cert-manager.io/Certificate:
                 health.lua: |
