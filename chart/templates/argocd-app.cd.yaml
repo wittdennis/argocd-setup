@@ -109,6 +109,7 @@ spec:
                   key: microsoft-tenant-id
         configs:
           cm:
+            application.resourceTrackingMethod: annotation
             admin.enabled: false
             dex.config: |
 

@@ -1,0 +1,17 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: foundry
+  namespace: argocd
+spec:
+  sourceRepos:
+    - https://github.com/wittdennis/foundryvtt-management
+  destinations:
+    - namespace: foundry
+      server: {{ .Values.destination.server }}
+    - namespace: foundry
+      name: cloud
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"

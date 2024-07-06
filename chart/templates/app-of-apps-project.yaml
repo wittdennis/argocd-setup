@@ -8,6 +8,7 @@ spec:
     - https://github.com/wittdennis/argocd-setup
     - https://github.com/wittdennis/k8s-platform
     - https://github.com/wittdennis/home-assistant
+    - https://github.com/wittdennis/foundryvtt-management
   destinations:
     - namespace: "argocd"
       server: {{ .Values.destination.server }}
