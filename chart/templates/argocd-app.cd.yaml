@@ -169,3 +169,4 @@ spec:
               g, k8s-admins, role:org-admin
           params:
             server.insecure: true
+            application.namespaces: foundry
