@@ -12,6 +12,8 @@ spec:
   destinations:
     - namespace: "argocd"
       server: {{ .Values.destination.server }}
+    - namespace: "foundry"
+      server: {{ .Values.destination.server }}
   namespaceResourceWhitelist:
     - group: "argoproj.io"
       kind: "Application"
