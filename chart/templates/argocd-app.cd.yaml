@@ -81,6 +81,7 @@ spec:
             serviceMonitor:
               enabled: true
         applicationSet:
+          allowAnyNamespace: true
           metrics:
             enabled: true
             serviceMonitor:
