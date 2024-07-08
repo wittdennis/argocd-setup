@@ -2,16 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: foundry
-  namespace: argocd
+  namespace: foundry
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: app-of-apps
+  project: foundry
   syncPolicy:
     automated:
       prune: true
   destination:
-    namespace: argocd
+    namespace: foundry
     server: {{ .Values.destination.server }}
   source:
     path: "."

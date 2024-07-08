@@ -10,9 +10,7 @@ spec:
     - https://github.com/wittdennis/home-assistant
     - https://github.com/wittdennis/foundryvtt-management
   destinations:
-    - namespace: "argocd"
-      server: {{ .Values.destination.server }}
-    - namespace: "foundry"
+    - namespace: "*"
       server: {{ .Values.destination.server }}
   namespaceResourceWhitelist:
     - group: "argoproj.io"
