@@ -19,6 +19,7 @@ spec:
     - https://victoriametrics.github.io/helm-charts
     - https://operator.min.io
     - https://charts.longhorn.io
+    - https://kubernetes-sigs.github.io/external-dns/
   sourceNamespaces:
     - argocd
   destinations:
