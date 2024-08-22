@@ -21,6 +21,7 @@ spec:
     - https://charts.longhorn.io
     - https://kubernetes-sigs.github.io/external-dns/
     - https://grafana.github.io/helm-charts
+    - https://kubernetes-sigs.github.io/descheduler
   sourceNamespaces:
     - argocd
   destinations:
