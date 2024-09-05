@@ -8,9 +8,14 @@ spec:
   sourceRepos:
     - https://github.com/wittdennis/home-assistant
     - http://pajikos.github.io/home-assistant-helm-chart
+    - https://schwarzit.github.io/node-red-chart/
+  sourceNamespaces:
+    - home-assistant
   destinations:
     - namespace: home-assistant
       server: {{ .Values.destination.server }}
+    - name: in-cluster
+      namespace: home-assistant
     - namespace: argocd
       server: {{ .Values.destination.server }}
   clusterResourceWhitelist:

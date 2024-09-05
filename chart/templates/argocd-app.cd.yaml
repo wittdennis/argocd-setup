@@ -173,7 +173,7 @@ spec:
               g, k8s-admins, role:org-admin
           params:
             server.insecure: true
-            application.namespaces: foundry
-            applicationsetcontroller.namespaces: foundry
+            application.namespaces: foundry, home-assistant
+            applicationsetcontroller.namespaces: foundry, home-assistant
             applicationsetcontroller.allowed.scm.providers: https://github.com/wittdennis
             applicationsetcontroller.enable.scm.providers: false
