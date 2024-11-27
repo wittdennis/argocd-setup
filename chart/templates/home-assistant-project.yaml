@@ -9,6 +9,7 @@ spec:
     - https://github.com/wittdennis/home-assistant
     - http://pajikos.github.io/home-assistant-helm-chart
     - https://schwarzit.github.io/node-red-chart/
+    - https://charts.derwitt.dev
   sourceNamespaces:
     - home-assistant
   destinations:

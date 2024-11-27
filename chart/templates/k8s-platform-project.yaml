@@ -24,6 +24,7 @@ spec:
     - https://kubernetes-sigs.github.io/descheduler
     - https://charts.releases.teleport.dev
     - https://chartmuseum.github.io/charts
+    - https://charts.derwitt.dev
   sourceNamespaces:
     - argocd
   destinations:
