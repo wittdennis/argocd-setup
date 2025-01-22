@@ -7,13 +7,10 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: app-of-apps
-  syncPolicy:
-    automated:
-      prune: true
-  destination: 
+  destination:
     namespace: argocd
     server: {{ .Values.destination.server }}
   source:
     path: packages/argo
-    repoURL: https://github.com/wittdennis/home-assistant   
+    repoURL: https://github.com/wittdennis/home-assistant
     targetRevision: HEAD
