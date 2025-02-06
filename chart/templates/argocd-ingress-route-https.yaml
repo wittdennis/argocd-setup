@@ -1,3 +1,4 @@
+---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
@@ -22,22 +23,3 @@ spec:
           scheme: h2c
   tls:
     secretName: deployments-home-derwitt-net-cert
----
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
-metadata:
-  name: argocd-server-http
-  namespace: argocd
-spec:
-  entryPoints:
-    - web
-  routes:
-    - kind: Rule
-      match: Host(`deployments.home.derwitt.net`)
-      priority: 10
-      services:
-        - name: argocd-server
-          port: 80
-      middlewares:
-        - name: redirect-to-https
-          namespace: traefik

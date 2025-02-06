@@ -1,3 +1,4 @@
+---
 apiVersion: v2
 name: root
 description: Root application for cluster bootstrapping
