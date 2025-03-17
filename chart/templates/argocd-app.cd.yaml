@@ -12,7 +12,7 @@ spec:
     automated: {}
   destination:
     namespace: argocd
-    server: {{ .Values.destination.server }}
+    server: { { .Values.destination.server } }
   source:
     repoURL: https://argoproj.github.io/argo-helm
     targetRevision: 7.8.11
@@ -70,6 +70,22 @@ spec:
             serviceMonitor:
               enabled: true
         server:
+          env:
+            - name: MICROSOFT_APPLICATION_ID
+              valueFrom:
+                secretKeyRef:
+                  name: dex-secrets
+                  key: microsoft-application-id
+            - name: MICROSOFT_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: dex-secrets
+                  key: microsoft-client-secret
+            - name: MICROSOFT_TENANT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: dex-secrets
+                  key: microsoft-tenant-id
           metrics:
             enabled: true
             serviceMonitor:
