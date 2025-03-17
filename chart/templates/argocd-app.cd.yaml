@@ -70,22 +70,6 @@ spec:
             serviceMonitor:
               enabled: true
         server:
-          env:
-            - name: MICROSOFT_APPLICATION_ID
-              valueFrom:
-                secretKeyRef:
-                  name: dex-secrets
-                  key: microsoft-application-id
-            - name: MICROSOFT_CLIENT_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: dex-secrets
-                  key: microsoft-client-secret
-            - name: MICROSOFT_TENANT_ID
-              valueFrom:
-                secretKeyRef:
-                  name: dex-secrets
-                  key: microsoft-tenant-id
           metrics:
             enabled: true
             serviceMonitor:
