@@ -15,7 +15,7 @@ spec:
     server: "{{ .Values.destination.server }}"
   source:
     repoURL: https://argoproj.github.io/argo-helm
-    targetRevision: 7.9.0
+    targetRevision: 8.0.0
     chart: argo-cd
     helm:
       releaseName: argocd
