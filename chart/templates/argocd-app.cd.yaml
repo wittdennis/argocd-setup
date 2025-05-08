@@ -23,6 +23,13 @@ spec:
 
         global:
           domain: {{ .Values.global.domain }}
+          affinity:
+            nodeAffinity:
+              matchExpressions:
+                - key: node-role.kubernetes.io/control-plane
+                  operator: NotIn
+                  values:
+                    - "true"
         securityContext:
           fsGroup: 1000
           runAsUser: 1000
