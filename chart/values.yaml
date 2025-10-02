@@ -2,4 +2,4 @@
 global:
   domain: deployments.home.derwitt.net
 destination:
-  server: https://kubernetes.default.svc
+  server: https://k8s.home.derwitt.net:6443

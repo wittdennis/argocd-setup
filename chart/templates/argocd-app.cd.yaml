@@ -118,8 +118,9 @@ spec:
                   key: microsoft-tenant-id
         configs:
           cm:
+            cluster.inClusterEnabled: "false"
             application.resourceTrackingMethod: annotation
-            admin.enabled: false
+            admin.enabled: "false"
             dex.config: |
 
               connectors:
