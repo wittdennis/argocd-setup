@@ -1,6 +1,7 @@
 ---
 k3s_cluster:
   hosts:
-    k8s.home:
+    workchops.wg.derwitt.net:
   vars:
     ansible_port: 15998
+    ansible_user: dwitt

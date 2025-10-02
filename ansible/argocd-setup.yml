@@ -1,14 +1,11 @@
 ---
 - name: Install ArgoCD
-  hosts: k8s.home
+  hosts: k3s_cluster
   vars_files:
     - ./vars.yml
-  remote_user: "{{ ssh_user }}"
   run_once: true
   roles:
     - role: argocd
       vars:
-        argocd__chart_version: "{{ argocd_chart_version }}"
-        argocd__install_cli: true
         argocd__helm_values: "{{ argocd_helm_values | from_yaml }}"
         argocd__action: "deploy"

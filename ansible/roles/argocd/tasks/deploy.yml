@@ -1,3 +1,4 @@
+# code: language=ansible
 ---
 - name: ARGOCD | Add argocd helm repo
   kubernetes.core.helm_repository:
@@ -10,5 +11,7 @@
     chart_ref: argo/argo-cd
     release_namespace: argocd
     create_namespace: true
+    update_repo_cache: true
     chart_version: "{{ argocd__chart_version }}"
     values: "{{ argocd__helm_values }}"
+    state: present

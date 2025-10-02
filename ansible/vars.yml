@@ -1,7 +1,4 @@
 ---
-ssh_user: dwitt
-
-argocd_chart_version: 6.6.0
 argocd_helm_values:
   global:
     domain: deployments.home.derwitt.net
@@ -18,5 +15,7 @@ argocd_helm_values:
     ingress:
       enabled: false
   configs:
+    cm:
+      cluster.inClusterEnabled: "false"
     params:
       server.insecure: true
