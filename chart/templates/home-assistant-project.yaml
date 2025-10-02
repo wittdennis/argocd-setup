@@ -12,9 +12,7 @@ spec:
   sourceNamespaces:
     - home-assistant
   destinations:
-    - name: in-cluster
-      namespace: home-assistant
-    - name: matter-server
+    - name: homelab
       namespace: home-assistant
     - namespace: argocd
       server: {{ .Values.destination.server }}
