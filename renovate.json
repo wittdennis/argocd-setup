@@ -1,6 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "local>wittdennis/renovate-config"
+  "extends": ["local>wittdennis/renovate-config"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["argo-cd", "argoproj/argo-helm"],
+      "groupName": "argo-cd",
+      "groupSlug": "argo-cd"
+    }
   ]
 }
