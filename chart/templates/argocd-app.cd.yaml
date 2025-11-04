@@ -120,7 +120,7 @@ spec:
           cm:
             cluster.inClusterEnabled: "false"
             application.resourceTrackingMethod: annotation
-            admin.enabled: "false"
+            admin.enabled: "true"
             dex.config: |
 
               connectors:
