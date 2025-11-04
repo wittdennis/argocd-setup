@@ -27,6 +27,7 @@ spec:
     - https://chartmuseum.github.io/charts
     - https://charts.derwitt.dev
     - https://cowboysysop.github.io/charts/
+    - https://helm.cilium.io
   sourceNamespaces:
     - argocd
   destinations:
