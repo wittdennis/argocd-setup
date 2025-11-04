@@ -1,11 +1,11 @@
 ---
 - name: Install ArgoCD
-  hosts: k3s_cluster
+  hosts: localhost
   vars_files:
     - ./vars.yml
   run_once: true
   roles:
     - role: argocd
       vars:
-        argocd__helm_values: "{{ argocd_helm_values | from_yaml }}"
-        argocd__action: "deploy"
+        argocd_helm_values: "{{ argocd_helm_values | from_yaml }}"
+        argocd_action: "deploy"

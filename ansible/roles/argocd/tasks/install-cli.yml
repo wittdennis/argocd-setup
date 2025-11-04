@@ -1,5 +1,5 @@
 ---
-- name: ARGOCD | Gather current cli version
+- name: Gather current cli version
   ansible.builtin.shell:
     cmd: |
       set -o pipefail
@@ -8,11 +8,11 @@
   changed_when: false
   failed_when: false
 
-- name: ARGOCD | Download argocd cli
-  when: argocd_cli_version.stdout != argocd__version
+- name: Download argocd cli
+  when: argocd_cli_version.stdout != argocd_version
   become: true
   ansible.builtin.get_url:
-    url: "https://github.com/argoproj/argo-cd/releases/download/{{ argocd__version }}/argocd-linux-{{ argocd__cli_arch }}"
+    url: "https://github.com/argoproj/argo-cd/releases/download/{{ argocd_version }}/argocd-linux-{{ argocd_cli_arch }}"
     dest: "/usr/local/bin/argocd"
     owner: root
     group: root

@@ -1,15 +1,15 @@
 ---
-- name: ARGOCD | Install argo-cd cli
-  when: argocd__install_cli and argocd__action == "deploy"
+- name: Install argo-cd cli
+  when: argocd_install_cli and argocd_action == "deploy"
   ansible.builtin.include_tasks:
     file: install-cli.yml
 
-- name: ARGOCD | Deploy argo-cd
-  when: argocd__action == "deploy"
+- name: Deploy argo-cd
+  when: argocd_action == "deploy"
   ansible.builtin.include_tasks:
     file: deploy.yml
 
-- name: ARGOCD | Remove argo-cd
-  when: argocd__action == "remove"
+- name: Remove argo-cd
+  when: argocd_action == "remove"
   ansible.builtin.include_tasks:
     file: remove.yml
