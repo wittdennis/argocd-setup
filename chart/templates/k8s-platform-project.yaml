@@ -29,6 +29,7 @@ spec:
     - https://cowboysysop.github.io/charts/
     - https://helm.cilium.io
     - oci://ghcr.io/siderolabs/charts/talos-cloud-controller-manager
+    - oci://ghcr.io/sergelogvinov/charts/proxmox-csi-plugin
   sourceNamespaces:
     - argocd
   destinations:
