@@ -28,6 +28,7 @@ spec:
     - https://charts.derwitt.dev
     - https://cowboysysop.github.io/charts/
     - https://helm.cilium.io
+    - oci://ghcr.io/siderolabs/charts/talos-cloud-controller-manager
   sourceNamespaces:
     - argocd
   destinations:
