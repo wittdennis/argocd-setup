@@ -82,7 +82,11 @@ spec:
             serviceMonitor:
               enabled: true
           ingress:
-            enabled: false
+            enabled: true
+            ingressClassName: nginx
+            tls: true
+            annotations:
+              cert-manager.io/cluster-issuer: derwitt-net-cluster-issuer
         repoServer:
           metrics:
             enabled: true
