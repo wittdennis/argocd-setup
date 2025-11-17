@@ -12,7 +12,7 @@ spec:
   sourceNamespaces:
     - home-assistant
   destinations:
-    - name: homelab
+    - name: home-assistant
       namespace: home-assistant
     - namespace: argocd
       server: {{ .Values.destination.server }}
