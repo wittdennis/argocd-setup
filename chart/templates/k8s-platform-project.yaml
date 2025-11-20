@@ -30,6 +30,7 @@ spec:
     - https://helm.cilium.io
     - oci://ghcr.io/siderolabs/charts/talos-cloud-controller-manager
     - oci://ghcr.io/sergelogvinov/charts/proxmox-csi-plugin
+    - oci://ghcr.io/cloudhippie/charts/yopass
   sourceNamespaces:
     - argocd
   destinations:
