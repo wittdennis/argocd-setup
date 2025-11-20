@@ -31,6 +31,7 @@ spec:
     - oci://ghcr.io/siderolabs/charts/talos-cloud-controller-manager
     - oci://ghcr.io/sergelogvinov/charts/proxmox-csi-plugin
     - oci://ghcr.io/cloudhippie/charts/yopass
+    - oci://ghcr.io/kyverno/charts/kyverno
   sourceNamespaces:
     - argocd
   destinations:
