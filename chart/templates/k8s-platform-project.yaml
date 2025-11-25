@@ -32,6 +32,7 @@ spec:
     - oci://ghcr.io/sergelogvinov/charts/proxmox-csi-plugin
     - oci://ghcr.io/cloudhippie/charts/yopass
     - oci://ghcr.io/kyverno/charts/kyverno
+    - https://charts.hetzner.cloud
   sourceNamespaces:
     - argocd
   destinations:
