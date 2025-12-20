@@ -33,6 +33,7 @@ spec:
     - oci://ghcr.io/cloudhippie/charts/yopass
     - oci://ghcr.io/kyverno/charts/kyverno
     - https://charts.hetzner.cloud
+    - https://cloudnative-pg.github.io/charts
   sourceNamespaces:
     - argocd
   destinations:
