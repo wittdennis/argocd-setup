@@ -34,6 +34,7 @@ spec:
     - oci://ghcr.io/kyverno/charts/kyverno
     - https://charts.hetzner.cloud
     - https://cloudnative-pg.github.io/charts
+    - https://meilisearch.github.io/meilisearch-kubernetes
   sourceNamespaces:
     - argocd
   destinations:
