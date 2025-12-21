@@ -35,6 +35,7 @@ spec:
     - https://charts.hetzner.cloud
     - https://cloudnative-pg.github.io/charts
     - https://meilisearch.github.io/meilisearch-kubernetes
+    - https://charts.goauthentik.io
   sourceNamespaces:
     - argocd
   destinations:
