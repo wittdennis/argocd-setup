@@ -127,6 +127,7 @@ spec:
             cluster.inClusterEnabled: "false"
             application.resourceTrackingMethod: annotation
             admin.enabled: "false"
+            controller.diff.server.side: "true"
             dex.config: |
 
               connectors:
