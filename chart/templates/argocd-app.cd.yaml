@@ -146,6 +146,11 @@ spec:
                 secretKeyRef:
                   name: dex-secrets
                   key: microsoft-tenant-id
+            - name: AUTHENTIK_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: dex-secrets
+                  key: authentik-client-secret
         configs:
           cm:
             cluster.inClusterEnabled: "false"
@@ -167,6 +172,19 @@ spec:
                     onlySecurityGroups: true
                     groups:
                       - k8s-admins
+                - type: oidc
+                  id: authentik
+                  name: authentik
+                  config:
+                    issuer: https://auth.derwitt.site/application/o/argocd/
+                    clientID: argocd
+                    clientSecret: "$AUTHENTIK_CLIENT_SECRET"
+                    redirectURI: http://127.0.0.1:8080/api/dex/callback
+                    insecureEnableGroups: true
+                    scopes:
+                      - openid
+                      - profile
+                      - email
             resource.customizations: |
               cert-manager.io/Certificate:
                 health.lua: |
