@@ -89,6 +89,30 @@ spec:
             tls: true
             annotations:
               cert-manager.io/cluster-issuer: derwitt-net-cluster-issuer
+          httproute:
+            enabled: true
+            parentRefs:
+              - group: gateway.networking.k8s.io
+                kind: Gateway
+                name: derwitt-site-gateway
+                namespace: kube-system
+            hostnames:
+              - cd.derwitt.site
+          grpcroute:
+            enabled: false
+            parentRefs:
+              - group: gateway.networking.k8s.io
+                kind: Gateway
+                name: derwitt-site-gateway
+                namespace: kube-system
+            hostnames:
+              - cd.derwitt.site
+            rules:
+              - matches:
+                - headers:
+                    - name: Content-Type
+                      type: RegularExpression
+                      value: "^application/grpc.*$"
         repoServer:
           metrics:
             enabled: true
