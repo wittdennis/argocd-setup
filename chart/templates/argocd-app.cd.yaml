@@ -127,21 +127,6 @@ spec:
               enabled: true
         dex:
           env:
-            - name: MICROSOFT_APPLICATION_ID
-              valueFrom:
-                secretKeyRef:
-                  name: dex-secrets
-                  key: microsoft-application-id
-            - name: MICROSOFT_CLIENT_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: dex-secrets
-                  key: microsoft-client-secret
-            - name: MICROSOFT_TENANT_ID
-              valueFrom:
-                secretKeyRef:
-                  name: dex-secrets
-                  key: microsoft-tenant-id
             - name: AUTHENTIK_CLIENT_SECRET
               valueFrom:
                 secretKeyRef:
@@ -156,18 +141,6 @@ spec:
             dex.config: |
 
               connectors:
-                - type: microsoft
-                  id: microsoft
-                  name: Microsoft
-                  config:
-                    clientID: "$MICROSOFT_APPLICATION_ID"
-                    clientSecret: "$MICROSOFT_CLIENT_SECRET"
-                    redirectURI: http://127.0.0.1:8080/api/dex/callback
-                    tenant: "$MICROSOFT_TENANT_ID"
-                    emailToLowercase: true
-                    onlySecurityGroups: true
-                    groups:
-                      - k8s-admins
                 - type: oidc
                   id: authentik
                   name: authentik
