@@ -84,11 +84,7 @@ spec:
             serviceMonitor:
               enabled: true
           ingress:
-            enabled: true
-            ingressClassName: nginx
-            tls: true
-            annotations:
-              cert-manager.io/cluster-issuer: derwitt-net-cluster-issuer
+            enabled: false
           httproute:
             enabled: true
             parentRefs:
