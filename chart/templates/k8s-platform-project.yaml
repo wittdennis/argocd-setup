@@ -37,6 +37,7 @@ spec:
     - https://meilisearch.github.io/meilisearch-kubernetes
     - https://charts.goauthentik.io
     - https://traefik.github.io/charts
+    - oci://ghcr.io/netbox-community/netbox-chart/netbox
   sourceNamespaces:
     - argocd
   destinations:
