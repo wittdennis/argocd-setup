@@ -36,6 +36,7 @@ spec:
     - https://cloudnative-pg.github.io/charts
     - https://meilisearch.github.io/meilisearch-kubernetes
     - https://charts.goauthentik.io
+    - https://traefik.github.io/charts
   sourceNamespaces:
     - argocd
   destinations:
