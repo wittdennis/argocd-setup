@@ -38,6 +38,7 @@ spec:
     - https://charts.goauthentik.io
     - https://traefik.github.io/charts
     - oci://ghcr.io/netbox-community/netbox-chart/netbox
+    - oci://ghcr.io/valkey-io/valkey-helm/valkey
   sourceNamespaces:
     - argocd
   destinations:
