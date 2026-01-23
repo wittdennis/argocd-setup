@@ -40,6 +40,8 @@ spec:
         networkPolicy:
           create: true
         controller:
+          replicas: 2
+          dynamicClusterDistribution: true
           metrics:
             enabled: true
             serviceMonitor:
@@ -79,6 +81,10 @@ spec:
             serviceMonitor:
               enabled: true
         server:
+          autoscaling:
+            enabled: true
+            minReplicas: 2
+            maxReplicas: 5
           metrics:
             enabled: true
             serviceMonitor:
@@ -110,11 +116,16 @@ spec:
                       type: RegularExpression
                       value: "^application/grpc.*$"
         repoServer:
+          autoscaling:
+            enabled: true
+            minReplicas: 2
+            maxReplicas: 5
           metrics:
             enabled: true
             serviceMonitor:
               enabled: true
         applicationSet:
+          replicas: 2
           allowAnyNamespace: true
           metrics:
             enabled: true
