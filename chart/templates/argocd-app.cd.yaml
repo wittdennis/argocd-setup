@@ -9,7 +9,10 @@ metadata:
 spec:
   project: argocd
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+    syncOptions:
+      - ServerSideApply=true
   destination:
     namespace: argocd
     server: "{{ .Values.destination.server }}"
