@@ -40,6 +40,7 @@ spec:
     - oci://ghcr.io/netbox-community/netbox-chart/netbox
     - oci://ghcr.io/valkey-io/valkey-helm/valkey
     - https://kubernetes-sigs.github.io/metrics-server/
+    - https://github.com/kubernetes-sigs/gateway-api
   sourceNamespaces:
     - argocd
   destinations:
