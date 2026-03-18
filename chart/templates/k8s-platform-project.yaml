@@ -41,6 +41,8 @@ spec:
     - oci://ghcr.io/valkey-io/valkey-helm/valkey
     - https://kubernetes-sigs.github.io/metrics-server/
     - https://github.com/kubernetes-sigs/gateway-api
+    - https://grafana-community.github.io/helm-charts
+    - oci://ghcr.io/grafana-community/helm-charts/loki
   sourceNamespaces:
     - argocd
   destinations:
