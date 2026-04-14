@@ -43,6 +43,7 @@ spec:
     - https://github.com/kubernetes-sigs/gateway-api
     - https://grafana-community.github.io/helm-charts
     - oci://ghcr.io/grafana-community/helm-charts/loki
+    - oci://ghcr.io/mogenius/helm-charts/renovate-operator
   sourceNamespaces:
     - argocd
   destinations:
