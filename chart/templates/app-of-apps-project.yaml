@@ -7,9 +7,9 @@ metadata:
 spec:
   sourceRepos:
     - https://github.com/wittdennis/argocd-setup
-    - https://github.com/wittdennis/k8s-platform
     - https://github.com/wittdennis/home-assistant
     - https://github.com/wittdennis/foundryvtt-management
+    - https://git.derwitt.site/homelab/yggdrasil
   destinations:
     - namespace: "*"
       server: {{ .Values.destination.server }}

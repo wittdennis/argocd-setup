@@ -6,7 +6,7 @@ metadata:
   namespace: argocd
 spec:
   sourceRepos:
-    - https://github.com/wittdennis/k8s-platform
+    - https://git.derwitt.site/homelab/yggdrasil
     - https://argoproj.github.io/argo-helm
     - https://runatlantis.github.io/helm-charts
     - https://charts.jetstack.io
