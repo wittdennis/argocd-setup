@@ -7,7 +7,7 @@ metadata:
 spec:
   sourceRepos:
     - https://github.com/wittdennis/argocd-setup
-    - https://github.com/wittdennis/home-assistant
+    - https://git.derwitt.site/homelab/midgard
     - https://github.com/wittdennis/foundryvtt-management
     - https://git.derwitt.site/homelab/yggdrasil
   destinations:

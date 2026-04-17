@@ -16,7 +16,7 @@ spec:
     server: {{ .Values.destination.server }}
   source:
     path: "."
-    repoURL: https://github.com/wittdennis/home-assistant
+    repoURL: https://git.derwitt.site/homelab/midgard
     targetRevision: HEAD
     directory:
       exclude: "*.json"
