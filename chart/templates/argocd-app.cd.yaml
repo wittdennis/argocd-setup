@@ -22,8 +22,7 @@ spec:
     chart: argo-cd
     helm:
       releaseName: argocd
-      values: |
-
+      valuesObject:
         global:
           domain: {{ .Values.global.domain }}
           affinity:
