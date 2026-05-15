@@ -122,10 +122,10 @@ spec:
               - cd.derwitt.site
             rules:
               - matches:
-                - headers:
-                    - name: Content-Type
-                      type: RegularExpression
-                      value: "^application/grpc.*$"
+                  - headers:
+                      - name: Content-Type
+                        type: RegularExpression
+                        value: "^application/grpc.*$"
         repoServer:
           autoscaling:
             enabled: true
