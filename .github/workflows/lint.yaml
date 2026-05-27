@@ -4,11 +4,11 @@ on: [push]
 
 jobs:
   ansible-lint:
-    uses: wittdennis/pipelines/.github/workflows/ansible-lint.yaml@aa83050fcb03fe69f7bff031a5452f387d19aa23 # 2.0.20
+    uses: wittdennis/pipelines/.github/workflows/ansible-lint.yaml@dc2fa1d2d14e165327e0e58bd1287ca2658fc64e # 2.0.21
     with:
       requirements-file: ansible/requirements.yml
 
   yaml-lint:
-    uses: wittdennis/pipelines/.github/workflows/yaml-lint.yaml@aa83050fcb03fe69f7bff031a5452f387d19aa23 # 2.0.20
+    uses: wittdennis/pipelines/.github/workflows/yaml-lint.yaml@dc2fa1d2d14e165327e0e58bd1287ca2658fc64e # 2.0.21
     with:
       yamllint-path: .yamllint
