@@ -160,16 +160,22 @@ spec:
             application.resourceTrackingMethod: annotation
             admin.enabled: "false"
             controller.diff.server.side: "true"
-            oidc.config: |
+            dex.config: |
 
-              name: Authentik
-              issuer: https://auth.derwitt.site/application/o/argocd/
-              clientID: argocd
-              clientSecret: "$oidc-secret:oidc.authentik.client-secret"
-              requestedScopes:
-                - openid
-                - profile
-                - email
+              connectors:
+                - type: oidc
+                  id: authentik
+                  name: Authentik
+                  config:
+                    issuer: https://auth.derwitt.site/application/o/argocd/
+                    clientID: argocd
+                    clientSecret: "$oidc-secret:oidc.authentik.client-secret"
+                    redirectURI: http://127.0.0.1:8080/api/dex/callback
+                    insecureEnableGroups: true
+                    scopes:
+                      - openid
+                      - profile
+                      - email
             resource.customizations: |
               cert-manager.io/Certificate:
                 health.lua: |
