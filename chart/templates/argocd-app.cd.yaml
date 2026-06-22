@@ -165,6 +165,16 @@ spec:
             application.resourceTrackingMethod: annotation
             admin.enabled: "false"
             controller.diff.server.side: "true"
+            oidc.config: | 
+
+              name: Authentik
+              issuer: https://auth.derwitt.site/application/o/argocd/
+              clientID: argocd
+              clientSecret: "$dex-secrets:authentik-client-secret"
+              requestedScopes:
+                - openid
+                - profile
+                - email
             dex.config: |
 
               connectors:
