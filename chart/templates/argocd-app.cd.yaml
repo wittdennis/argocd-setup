@@ -153,12 +153,12 @@ spec:
             serviceMonitor:
               enabled: true
         dex:
-          enabled: false
+          enabled: true
         configs:
           cm:
             cluster.inClusterEnabled: "false"
             application.resourceTrackingMethod: annotation
-            admin.enabled: "true"
+            admin.enabled: "false"
             controller.diff.server.side: "true"
             oidc.config: |
 
