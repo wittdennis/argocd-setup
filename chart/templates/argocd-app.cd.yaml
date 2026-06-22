@@ -24,7 +24,7 @@ spec:
       releaseName: argocd
       valuesObject:
         global:
-          domain: { { .Values.global.domain } }
+          domain: {{ .Values.global.domain }}
           affinity:
             nodeAffinity:
               matchExpressions:
@@ -174,7 +174,7 @@ spec:
                   config:
                     issuer: https://auth.derwitt.site/application/o/argocd/
                     clientID: argocd
-                    clientSecret: "$AUTHENTIK_CLIENT_SECRET"
+                    clientSecret: "$dex-secrets:authentik-client-secret"
                     redirectURI: http://127.0.0.1:8080/api/dex/callback
                     insecureEnableGroups: true
                     scopes:
