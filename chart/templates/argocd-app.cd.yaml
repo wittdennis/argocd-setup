@@ -153,12 +153,7 @@ spec:
             serviceMonitor:
               enabled: true
         dex:
-          env:
-            - name: AUTHENTIK_CLIENT_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: dex-secrets
-                  key: authentik-client-secret
+          enabled: false
         configs:
           cm:
             cluster.inClusterEnabled: "false"
@@ -170,27 +165,11 @@ spec:
               name: Authentik
               issuer: https://auth.derwitt.site/application/o/argocd/
               clientID: argocd
-              clientSecret: "$dex-secrets:authentik-client-secret"
+              clientSecret: "$oidc-secret:oidc.authentik.client-secret"
               requestedScopes:
                 - openid
                 - profile
                 - email
-            dex.config: |
-
-              connectors:
-                - type: oidc
-                  id: authentik
-                  name: authentik
-                  config:
-                    issuer: https://auth.derwitt.site/application/o/argocd/
-                    clientID: argocd
-                    clientSecret: "$dex-secrets:authentik-client-secret"
-                    redirectURI: http://127.0.0.1:8080/api/dex/callback
-                    insecureEnableGroups: true
-                    scopes:
-                      - openid
-                      - profile
-                      - email
             resource.customizations: |
               cert-manager.io/Certificate:
                 health.lua: |
