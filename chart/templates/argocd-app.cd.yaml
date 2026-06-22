@@ -24,7 +24,7 @@ spec:
       releaseName: argocd
       valuesObject:
         global:
-          domain: {{ .Values.global.domain }}
+          domain: { { .Values.global.domain } }
           affinity:
             nodeAffinity:
               matchExpressions:
