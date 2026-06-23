@@ -8,7 +8,7 @@ spec:
   sourceRepos:
     - https://github.com/wittdennis/argocd-setup
     - https://git.derwitt.site/homelab/midgard
-    - https://github.com/wittdennis/foundryvtt-management
+    - https://git.derwitt.site/homelab/asgard
     - https://git.derwitt.site/homelab/yggdrasil
   destinations:
     - namespace: "*"

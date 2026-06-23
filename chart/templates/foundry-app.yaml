@@ -16,7 +16,7 @@ spec:
     server: {{ .Values.destination.server }}
   source:
     path: "."
-    repoURL: https://github.com/wittdennis/foundryvtt-management
+    repoURL: https://git.derwitt.site/homelab/asgard
     targetRevision: HEAD
     directory:
       exclude: "*.json"
