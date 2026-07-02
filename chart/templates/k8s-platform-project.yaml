@@ -44,6 +44,7 @@ spec:
     - https://grafana-community.github.io/helm-charts
     - oci://ghcr.io/grafana-community/helm-charts/loki
     - oci://ghcr.io/mogenius/helm-charts/renovate-operator
+    - oci://ghcr.io/mogenius/helm-charts/mogenius-operator
   sourceNamespaces:
     - argocd
   destinations:
