@@ -47,6 +47,7 @@ spec:
     - oci://ghcr.io/mogenius/helm-charts/mogenius-operator
     - oci://ghcr.io/berriai/litellm-helm
     - https://helm.openwebui.com
+    - https://intel.github.io/helm-charts
   sourceNamespaces:
     - argocd
   destinations:
