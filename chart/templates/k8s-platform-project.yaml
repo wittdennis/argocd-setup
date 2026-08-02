@@ -48,6 +48,7 @@ spec:
     - oci://ghcr.io/berriai/litellm-helm
     - https://helm.openwebui.com
     - https://intel.github.io/helm-charts
+    - https://kubernetes-sigs.github.io/node-feature-discovery/charts
   sourceNamespaces:
     - argocd
   destinations:
