@@ -47,7 +47,7 @@ spec:
     - oci://ghcr.io/mogenius/helm-charts/mogenius-operator
     - oci://ghcr.io/berriai/litellm-helm
     - https://helm.openwebui.com
-    - https://intel.github.io/helm-charts
+    - https://github.com/intel/intel-device-plugins-for-kubernetes
     - https://kubernetes-sigs.github.io/node-feature-discovery/charts
   sourceNamespaces:
     - argocd
