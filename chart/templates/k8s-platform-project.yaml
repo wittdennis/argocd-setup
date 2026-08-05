@@ -50,6 +50,7 @@ spec:
     - https://github.com/intel/intel-device-plugins-for-kubernetes
     - https://kubernetes-sigs.github.io/node-feature-discovery/charts
     - https://otwld.github.io/ollama-helm
+    - oci://ghcr.io/tibuntu/charts/homeassistant-kubernetes-rbac
   sourceNamespaces:
     - argocd
   destinations:
