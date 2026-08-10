@@ -44,8 +44,7 @@ spec:
     - https://github.com/kubernetes-sigs/gateway-api
     - https://grafana-community.github.io/helm-charts
     - oci://ghcr.io/grafana-community/helm-charts/loki
-    - oci://ghcr.io/mogenius/helm-charts/renovate-operator
-    - oci://ghcr.io/mogenius/helm-charts/mogenius-operator
+    - oci://ghcr.io/mogenius/helm-charts/*
     - oci://ghcr.io/berriai/litellm-helm
     - https://helm.openwebui.com
     - https://github.com/intel/intel-device-plugins-for-kubernetes
