@@ -26,6 +26,7 @@ spec:
     - https://charts.releases.teleport.dev
     - https://chartmuseum.github.io/charts
     - https://charts.derwitt.dev
+    - oci://ghcr.io/wittdennis/helm-charts/*
     - https://cowboysysop.github.io/charts/
     - https://helm.cilium.io
     - oci://ghcr.io/siderolabs/charts/talos-cloud-controller-manager

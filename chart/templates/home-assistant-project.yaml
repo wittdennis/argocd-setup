@@ -9,6 +9,7 @@ spec:
     - https://git.derwitt.site/homelab/midgard
     - http://pajikos.github.io/home-assistant-helm-chart
     - https://charts.derwitt.dev
+    - oci://ghcr.io/wittdennis/helm-charts/*
   sourceNamespaces:
     - home-assistant
   destinations:

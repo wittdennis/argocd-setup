@@ -8,6 +8,7 @@ spec:
   sourceRepos:
     - https://git.derwitt.site/homelab/asgard
     - https://charts.derwitt.dev
+    - oci://ghcr.io/wittdennis/helm-charts/*
   sourceNamespaces:
     - foundry
   destinations:
