@@ -51,6 +51,7 @@ spec:
     - https://kubernetes-sigs.github.io/node-feature-discovery/charts
     - https://otwld.github.io/ollama-helm
     - oci://ghcr.io/tibuntu/charts/homeassistant-kubernetes-rbac
+    - oci://ghcr.io/valkey-io/valkey-helm/valkey-operator
   sourceNamespaces:
     - argocd
   destinations:
