@@ -159,7 +159,6 @@ spec:
             cluster.inClusterEnabled: "false"
             application.resourceTrackingMethod: annotation
             admin.enabled: "false"
-            controller.diff.server.side: "true"
             dex.config: |
 
               connectors:
@@ -215,6 +214,7 @@ spec:
               g, k8s-admins, role:org-admin
           params:
             server.insecure: true
+            controller.diff.server.side: "true"
             application.namespaces: foundry, home-assistant
             applicationsetcontroller.namespaces: foundry, home-assistant
             applicationsetcontroller.allowed.scm.providers: https://github.com/wittdennis
