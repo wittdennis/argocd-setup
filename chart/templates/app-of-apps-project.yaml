@@ -10,7 +10,6 @@ spec:
     - https://git.derwitt.site/homelab/midgard
     - https://git.derwitt.site/homelab/asgard
     - https://git.derwitt.site/homelab/yggdrasil
-    - https://github.com/wittdennis/mogenius-gitops-test.git
   destinations:
     - namespace: "*"
       server: {{ .Values.destination.server }}
