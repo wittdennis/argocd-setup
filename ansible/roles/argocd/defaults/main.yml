@@ -1,6 +1,6 @@
 ---
 argocd_version: v3.5.2 # renovate: datasource=github-releases depName=argoproj/argo-cd versioning=semver
-argocd_chart_version: 10.4.1 # renovate: datasource=github-releases depName=argoproj/argo-helm extractVersion=^argo-cd-(?<version>.*)$ versioning=semver
+argocd_chart_version: 10.4.2 # renovate: datasource=github-releases depName=argoproj/argo-helm extractVersion=^argo-cd-(?<version>.*)$ versioning=semver
 argocd_helm_values: {}
 argocd_install_cli: false
 argocd_action: deploy
