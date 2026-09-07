@@ -5,7 +5,7 @@ metadata:
   name: mogenius-ghcr
   namespace: argocd
   labels:
-    argocd.argoproj.io/secret-type: repository
+    argocd.argoproj.io/secret-type: repo-creds
 spec:
   refreshInterval: 1h
   secretStoreRef:
@@ -18,10 +18,9 @@ spec:
     template:
       metadata:
         labels:
-          argocd.argoproj.io/secret-type: repository
+          argocd.argoproj.io/secret-type: repo-creds
       data:
         type: helm
-        name: mogenius-ghcr
         url: ghcr.io/mogenius/helm-charts
         enableOCI: "true"
         username: pat
