@@ -53,6 +53,7 @@ spec:
     - oci://ghcr.io/tibuntu/charts/homeassistant-kubernetes-rbac
     - oci://ghcr.io/valkey-io/valkey-helm/valkey-operator
     - https://charts.loft.sh
+    - oci://git.derwitt.site/containers/helm-charts/*
   sourceNamespaces:
     - argocd
   destinations:
